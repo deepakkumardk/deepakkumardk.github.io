@@ -61,14 +61,26 @@ export default function Home() {
               title={"Kotlin"}
               href="https://kotlinlang.org/"
             />
-            <TechStackView src="javascript.svg" title={"JavaScript"} href="" />
-            <TechStackView src="typescript.svg" title={"TavaScript"} href="" />
+            <TechStackView
+              src="javascript.svg"
+              title={"JavaScript"}
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            />
+            <TechStackView
+              src="typescript.svg"
+              title={"TavaScript"}
+              href="https://www.typescriptlang.org/"
+            />
             <TechStackView
               src="react-native.svg"
               title={"React-Native"}
-              href=""
+              href="https://reactnative.dev/"
             />
-            <TechStackView src="realm.svg" title={"Realm"} href="" />
+            <TechStackView
+              src="realm.svg"
+              title={"Realm"}
+              href="https://realm.io/"
+            />
           </SimpleGrid>
         </Box>
         <HStack marginTop={100}>
