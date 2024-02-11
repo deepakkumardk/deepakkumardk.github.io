@@ -74,7 +74,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} yarn build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       # - name: Static HTML export with Next.js
       #   run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
@@ -93,3 +93,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+        with:
+          target_branch: main # Set your target branch for GitHub Pages
+          # repo_token: ${{ secrets.GITHUB_TOKEN }}
+          cleanup: false # Keep existing files on the gh-pages branch
+          allow_empty_commit: true # Commit even if there are no changes
+
