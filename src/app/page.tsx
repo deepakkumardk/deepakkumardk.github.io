@@ -1,16 +1,5 @@
 import styles from "./page.module.css";
-import {
-  Box,
-  Button,
-  Card,
-  Container,
-  HStack,
-  Image,
-  Link,
-  SimpleGrid,
-  Spacer,
-  Text,
-} from "@chakra-ui/react";
+import { Box, HStack, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
 
 const TECH_STACKS_IMAGE_SIZE = 16;
 
@@ -37,7 +26,11 @@ export default function Home() {
   };
 
   return (
-    <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8} padding={16}>
+    <SimpleGrid
+      columns={{ sm: 1, md: 2 }}
+      spacing={8}
+      padding={{ base: "24px", md: 16 }}
+    >
       <Box flexDirection={"column"} display={"flex"}>
         <Box>
           <Text fontSize={"5xl"}>{"Deepak Kumar"}</Text>
@@ -45,21 +38,26 @@ export default function Home() {
             {"Mobile App Developer (Android, React-Native)"}
           </Text>
           <Text fontSize={"sm"}>
-            {"Lead Mobile Engineer at Thoughts2Binary"}
+            {"Lead Mobile Engineer at "}
+            <Link
+              href={"https://www.thoughts2binary.com/"}
+              isExternal
+              style={{
+                textDecoration: "underline",
+              }}
+            >
+              Thoughts2Binary
+            </Link>
           </Text>
+
           <Box margin={8} />
           <Text fontSize={"3xl"}>{"Tech Stacks"}</Text>
           <Box marginBottom={4} />
           <SimpleGrid minChildWidth={TECH_STACKS_IMAGE_SIZE} spacing="4px">
             <TechStackView
-              src="android.svg"
-              title={"Android"}
-              href="https://developer.android.com/"
-            />
-            <TechStackView
-              src="kotlin.svg"
-              title={"Kotlin"}
-              href="https://kotlinlang.org/"
+              src="react-native.svg"
+              title={"React-Native"}
+              href="https://reactnative.dev/"
             />
             <TechStackView
               src="javascript.svg"
@@ -72,9 +70,14 @@ export default function Home() {
               href="https://www.typescriptlang.org/"
             />
             <TechStackView
-              src="react-native.svg"
-              title={"React-Native"}
-              href="https://reactnative.dev/"
+              src="kotlin.svg"
+              title={"Kotlin"}
+              href="https://kotlinlang.org/"
+            />
+            <TechStackView
+              src="android.svg"
+              title={"Android"}
+              href="https://developer.android.com/"
             />
             <TechStackView
               src="realm.svg"
@@ -83,7 +86,7 @@ export default function Home() {
             />
           </SimpleGrid>
         </Box>
-        <HStack marginTop={100}>
+        <HStack marginTop={{ base: 8, md: 100 }}>
           <Link href={"https://github.com/deepakkumardk/"} isExternal>
             <Image
               boxSize="24px"
@@ -108,31 +111,30 @@ export default function Home() {
           development, I have honed my skills and expertise in crafting
           cutting-edge solutions using Android and React Native. Throughout my
           journey, I have navigated diverse technological stacks, seamlessly
-          delivering high-quality apps, products, and consumer-centric
-          solutions.
+          delivering high-quality apps, products, and consumer-centric solutions
+          with both agile and scrum development.
           <br />
           <br />
-          One of my key strengths lies in the meticulous{" "}
+          One of my key strengths lies in the thorough and expandable{" "}
           <Text as={"b"} color={"white"}>
-            architecture and structuring of projects
+            architecture and structuring the projects
           </Text>
           , ensuring that the codebase aligns seamlessly with project
           requirements while maintaining a{" "}
           <Text as={"b"} color={"white"}>
-            strong foundation
+            strong foundation & scalability
           </Text>{" "}
-          for future extensibility. I take pride in my ability to envision and
-          implement robust structures that not only meet immediate needs but
-          also pave the way for
+          and also I take pride in my ability to visualize and implement robust
+          structures that not only meet immediate needs but also pave the way
+          for
           <Text as={"b"} color={"white"}>
             {" "}
             scalable and adaptable applications.
           </Text>
           <br />
           <br />
-          In my role as a
+          In my role as a{" "}
           <Text as={"b"} color={"white"}>
-            {" "}
             Lead Mobile Engineer
           </Text>
           , I had the privilege of leading a talented team of 10 mobile
@@ -140,7 +142,7 @@ export default function Home() {
           and leadership, I facilitated the successful execution of multiple
           initiatives, overseeing the entire mobile development lifecycle. This
           experience has provided me with valuable insights into team
-          management, fostering a collaborative environment that encourages
+          management, promoting a collaborative environment that encourages
           innovation and excellence.
         </Text>
         <Box marginTop={8} marginBottom={8} />
