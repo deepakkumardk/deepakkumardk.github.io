@@ -1,5 +1,16 @@
+import { SKILLS } from "src/constants";
 import styles from "./page.module.css";
-import { Box, HStack, Image, Link, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  HStack,
+  Image,
+  Link,
+  SimpleGrid,
+  Tag,
+  Text,
+  Wrap,
+} from "@chakra-ui/react";
 
 const TECH_STACKS_IMAGE_SIZE = 16;
 
@@ -35,7 +46,7 @@ export default function Home() {
         <Box>
           <Text fontSize={"5xl"}>{"Deepak Kumar"}</Text>
           <Text fontSize={"lg"}>
-            {"Mobile App Developer (Android, React-Native)"}
+            {"Mobile App Developer (React-Native, Android, iOS)"}
           </Text>
           <Text fontSize={"sm"}>
             {"Lead Mobile Engineer at "}
@@ -86,7 +97,7 @@ export default function Home() {
             />
           </SimpleGrid>
         </Box>
-        <HStack marginTop={{ base: 8, md: 100 }}>
+        <HStack marginTop={{ base: 8, md: 20 }}>
           <Link href={"https://github.com/deepakkumardk/"} isExternal>
             <Image
               boxSize="24px"
@@ -95,6 +106,24 @@ export default function Home() {
             />
           </Link>
         </HStack>
+
+        <Text fontSize={"3xl"} mt={8} mb={4}>
+          {"Skills"}
+        </Text>
+
+        <Wrap spacing="8px">
+          {SKILLS.map((skill) => (
+            <Badge
+              borderRadius={"12px"}
+              key={skill}
+              colorScheme="green"
+              ps={"2"}
+              pe={"2"}
+            >
+              {skill}
+            </Badge>
+          ))}
+        </Wrap>
       </Box>
       <Box>
         <Text color={"#94A3B8"}>
