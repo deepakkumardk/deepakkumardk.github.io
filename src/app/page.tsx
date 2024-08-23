@@ -1,13 +1,12 @@
 import { SKILLS } from "src/constants";
-import styles from "./page.module.css";
 import {
   Badge,
   Box,
+  Center,
   HStack,
   Image,
   Link,
   SimpleGrid,
-  Tag,
   Text,
   Wrap,
 } from "@chakra-ui/react";
@@ -29,9 +28,11 @@ export default function Home() {
         <Link href={href}>
           <Image boxSize={TECH_STACKS_IMAGE_SIZE} src={src} alt={title} />
         </Link>
-        <Text marginTop={1.5} fontSize={"smaller"}>
-          {title}
-        </Text>
+        <Center>
+          <Text marginTop={1.5} fontSize={"smaller"}>
+            {title}
+          </Text>
+        </Center>
       </Box>
     );
   };
