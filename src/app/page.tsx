@@ -46,10 +46,10 @@ export default function Home() {
       <Box flexDirection={"column"} display={"flex"}>
         <Box>
           <Text fontSize={"5xl"}>{"Deepak Kumar"}</Text>
-          <Text fontSize={"lg"}>
+          <Text fontSize={"xl"}>
             {"Mobile App Developer (React-Native, Android, iOS)"}
           </Text>
-          <Text fontSize={"sm"}>
+          <Text fontSize={"md"}>
             {"Lead Mobile Engineer at "}
             <Link
               href={"https://www.thoughts2binary.com/"}
@@ -101,9 +101,16 @@ export default function Home() {
         <HStack marginTop={{ base: 8, md: 20 }}>
           <Link href={"https://github.com/deepakkumardk/"} isExternal>
             <Image
-              boxSize="24px"
+              boxSize="32px"
               src="https://github.com/fluidicon.png"
               alt="GitHub"
+            />
+          </Link>
+          <Link href={"https://linkedin.com/in/deepak-kumar--dk"} isExternal>
+            <Image
+              boxSize="32px"
+              src="https://static.licdn.com/aero-v1/sc/h/cukxdu7s8ldmqz13xdao5xe75"
+              alt="Linkedin"
             />
           </Link>
         </HStack>
@@ -135,7 +142,7 @@ export default function Home() {
           <br />
           With over{" "}
           <Text as={"b"} color={"white"}>
-            5+ years
+            6+ years
           </Text>{" "}
           of dedicated experience in the dynamic realm of mobile app
           development, I have honed my skills and expertise in crafting
@@ -176,6 +183,44 @@ export default function Home() {
           innovation and excellence.
         </Text>
         <Box marginTop={8} marginBottom={8} />
+        <Text fontSize={"2xl"} color={"white"}>
+          Open Source Projects
+        </Text>
+        <br />
+        <Text as={"b"} color={"white"}>
+          React-Native-Blossom-UI
+        </Text>
+        <br />
+        <HStack>
+          <Link
+            as={"a"}
+            style={{
+              textDecoration: "underline",
+            }}
+            href={"https://github.com/deepakkumardk/react-native-blossom-ui"}
+            isExternal
+          >
+            Github
+          </Link>
+          <Text>{" | "}</Text>
+          <Link
+            as={"a"}
+            style={{
+              textDecoration: "underline",
+            }}
+            href={"https://docs-react-native-blossom-ui.vercel.app/docs/intro"}
+            isExternal
+          >
+            Documentation
+          </Link>
+        </HStack>
+
+        <Text color={"white"}>
+          A react-native UI library to build & ship faster with consistent and
+          customizable UI. It has 20+ components to build an awesome blossom UI.
+          It has total customizable UI and theming along with dark theme
+          support.
+        </Text>
       </Box>
     </SimpleGrid>
   );
